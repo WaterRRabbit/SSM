@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hg.dao.UserDAO">
+    <select id="getUsers" resultType="User">
+        select * from users
+    </select>
+
+    <select id="getUser" resultType="User" parameterType="Integer">
+        select * from users where id=#{id}
+    </select>
+
+    <insert id="save" parameterType="User">
+        insert into users(id,name,idCard,address,phone) values (#{id},#{name},#{idCard},#{address},#{phone})
+    </insert>
+
+    <delete id="deleteUser" parameterType="Integer">
+        delete from users where id=#{id}
+    </delete>
+
+    <update id="updateUser" parameterType="User">
+        update users set name=#{name},idCard=#{idCard},address=#{address},phone=#{phone} where id=#{id}
+    </update>
+</mapper>

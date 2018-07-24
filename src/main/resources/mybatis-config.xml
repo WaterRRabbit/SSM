@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <!--User类的别名-->
+        <typeAlias type="com.hg.entity.User" alias="User"/>
+        <typeAlias type="com.hg.entity.Admin" alias="Admin"/>
+    </typeAliases>
+
+</configuration>
